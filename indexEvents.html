@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com JS - elementos e eventos</title>
+</head>
+<body>
+    <h1> O mistério da lâmpada!!! </h1>
+    <div id="local"></div>
+    <input type="button" value="Ligar" id="btnLigar" >
+    <input type="button" value="Desligar" id="btnDesligar" onmouseover="Desligar()">
+    <button type="button" id="btnOcultar" onclick="Ocultar()"> Ocultar </button>
+    <input type="button" value="Exibir" id="btnExibir" onmouseover="Exibir()" onclick="Ligar()">
+    <input type="button" value="Alternar" id="btnAlternar" onclick="Alternar()"> 
+    <input type="button" value="Adicionar" id="btnAdicionar">
+    <input type="button" value="Remover" id="btnRemover">
+    <br>
+    <img src="images/luzDesligada.gif" id="lampada">
+
+
+
+
+
+    <script>
+        document.getElementById('btnAdicionar').addEventListener('click', function(){
+            var novaImagem = document.createElement('img')
+            novaImagem.src = "images/image.png"
+            document.body.appendChild(novaImagem)
+
+            var texto = document.createElement('p')
+            texto.innerHTML = "Adicionando Elementos"
+            document.getElementById('local').appendChild(texto)
+        })
+
+        document.getElementById('btnRemover').addEventListener('click', function(){
+            
+        })
+
+        //onmouseover="Ligar()"
+        document.getElementById('btnLigar').addEventListener('mouseover', Ligar)
+
+        function Ligar()
+        {
+            document.getElementById('lampada').src = 'images/luzLigada.gif'
+        }
+
+        document.getElementById('btnDesligar').addEventListener('mouseover', function(){
+            document.getElementById('lampada').src = 'images/luzDesligada.gif'
+        })
+        /*Ou desse modo
+
+        function Desligar()
+        {
+            document.getElementById('lampada').src = 'images/luzDesligada.gif'
+
+        }
+        */
+
+        function Ocultar()
+        {
+            document.getElementById('lampada').style.display = "none"
+        }
+
+        function Exibir()
+        {
+            document.getElementById('lampada').style.display = "block" /*Inline se mistura com outros elementos, block somente ele ocupa a linha toda do site*/
+        }
+
+        function Alternar()
+        {
+            const objLampada = document.getElementById('lampada');
+            if (objLampada.getAttribute('src') == "images/luzDesligada.gif")
+                objLampada.src = "images/luzLigada.gif"
+            else
+                objLampada.src = "images/luzDesligada.gif"
+        }
+    </script>
+</body>
+</html>

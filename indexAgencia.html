@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pacotes de Viagens </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+<div class="alert alert-primary" role="alert">
+ <strong>  Agência de Viagens Lual </strong>
+ <p id="idHora">  </p>
+</div>
+
+<form id="idFormulario" >
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="idEmail">Email</label>
+            <input type="email" class="form-control" id="idEmail" >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="idNome">Nome do Cliente </label>
+            <input type="text" class="form-control" id="idNome" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Pacotes de Viagens Destino </label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="destino" id="idGramado" value="3000.00"  onclick="CacularPacote()"  >
+                <label class="form-check-label" for="idGramado"> RS - Gramado </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="destino" id="idSP" value="2000.00"  onclick="CacularPacote()" >
+                <label class="form-check-label" for="idSP"> SP- SP </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="destino" id="idMinas" value="1000.00"  onclick="CacularPacote()">
+                <label class="form-check-label" for="idMinas">MG - Ouro Preto </label>
+            </div>        
+        </div>
+       
+        <div class="form-group col-md-3">
+           <p> Adicionais ao Pacote</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="idTraslado" value="0" name="adicionais" checked>
+                <label class="form-check-label" for="idTraslado"> Traslado</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="idPasseios" value="300.0" name="adicionais">
+                <label class="form-check-label" for="idPasseios"> Passeios</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="idJantares" value="500.0" name="adicionais">
+                <label class="form-check-label" for="idJantares"> Jantares</label>
+            </div>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="idEmpresasAereas">Empresas Aéreas </label>
+            <select id="idEmpresasAereas" class="form-control" name= "empresasAereas">
+                <option value="0.10"> Azul  </option>
+                <option value="0.2"> Latan </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row"  style="justify-content: center;" >
+          <br> 
+          <input type="button" value="Calcular Pacote" onclick="CacularPacote()"  class="btn btn-primary">  
+          <input type="button" value="Limpar" onclick="Limpar()" class="btn btn-primary"  style="margin-left: 20px;" >
+          <input type="button" value="Imprimir" onclick="Imprimir()" class="btn btn-primary" style="margin-left: 20px;">
+    </div>
+    <br>
+    <label> Total do Pacote: </label>
+    <input type = "text" id="idTotalPacote" readonly class="form-control" > 
+
+    <br>
+    <label for="descPacote">Descrição do Pacote </label>
+    <textarea name="descPacote" id="descPacote" rows="4" class="form-control" readonly></textarea>
+</form>
+</div>
+
+<script src="scriptAgencia.js"></script>
+</body>
+</html>

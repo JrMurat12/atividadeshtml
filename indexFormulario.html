@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários HTML5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container-fluid">
+    <form>
+        <fieldset>
+        <legend> Dados Pessoais </legend>
+        <label for="nome"> Nome </label>
+        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email">
+        
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control" name="senha" id="senha" disabled>
+        
+        <input type="hidden" name="secreto">
+        <br>
+        <label for="foto">Escolha uma foto:</label>
+        <input type="file" id="foto"> <br>
+        <label for="uf"> Estados </label>
+        <select id="UF">
+            <optgroup label="Região Sudeste">
+             <option value="SP">São Paulo</option> 
+             <option value="RJ">Rio de Janeiro</option> 
+             <option value="ES">Espirito Santo</option> 
+             <option value="MG">Minas Gerais</option> 
+            </optgroup>
+
+            <optgroup label="Região Sul">
+                <option value="PA"> Paraná</option>
+                <option value="SC">Santa Catarina</option> 
+                <option value="RS">Rio Grande do Sul</option> 
+            </optgroup>
+        </select>
+
+        <input type="checkbox" name="permitirFoto" id="foto"> Permitir Foto
+        <input type="file">
+
+        <input type="checkbox" name="tipoAprendizado" id="tipo" checked> Praticando <!--Checked já preenche o espaço da check box-->
+        <input type="checkbox" name="tipoAprendizado" id="tipo" checked disabled> Lendo <!--Disable não deixa selecionar a checkbox-->
+        <input type="checkbox" name="tipoAprendizado" id="tipo"> Escrevendo <!--Checkbox pode selecionar mais de um já radio não-->
+
+        <br><br>
+        Estado Civil
+        <input type="radio" name="estadoCivil"> Solteiro
+        <input type="radio" name="estadoCivil"> Casado
+        <input type="radio" name="estadoCivil"> Viúvo
+
+        <br><br>
+        Gênero 
+        <input type="radio" name="genero"> Masculino
+        <input type="radio" name="genero"> Feminino
+        <input type="radio" name="genero"> Indefinido
+
+        <br>
+        Ano 
+        <input type="number" min="1920" max="2020">
+
+        <br>
+        Data de nascimento
+        <input type="date" max="2020-09-21"
+
+        <br><br>
+        <input type="submit" class="btn btn-outline-primary" value="Cadastrar aluno">
+        <input type="reset" value="Limpar dados">
+        </fieldset>
+    </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

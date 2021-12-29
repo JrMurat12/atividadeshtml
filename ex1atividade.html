@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <form autocomplete="off">
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="idNome">Nome</label>
+        <input type="text" class="form-control" id="idNome" required placeholder="Informe seu nome">
+    </div>
+    <br>
+    <div class="form-group col-md-12">
+        <label for="idEmail">Email</label>
+        <input type="email" class="form-control" id="idEmail" >
+    </div>
+    <div class="form-group col-md-12">
+        <label for="idNum">Fone</label>
+        <input type="tel" class="form-control" id="idNum" placeholder="(xx) xxxx-xxxx" pattern="[0-9]{4}-[0-9]{4}">
+    </div>
+    <div class="form-group col-md-12">
+        <label for="idSenha">Senha</label>
+        <input type="password" class="form-control" id="idSenha" >
+    </div>
+    <div>
+        <label for="idCor">Selecione a cor do produto:</label>
+        <input type="color">
+    </div>
+    <div>
+    <label for="uf"> Estados </label>
+    <select id="UF">
+        <optgroup label="Região Sudeste">
+         <option value="SP">São Paulo</option> 
+         <option value="RJ">Rio de Janeiro</option> 
+         <option value="ES">Espirito Santo</option> 
+         <option value="MG">Minas Gerais</option> 
+        </optgroup>
+
+        <optgroup label="Região Sul">
+            <option value="PR"> Paraná</option>
+            <option value="SC">Santa Catarina</option> 
+            <option value="RS">Rio Grande do Sul</option> 
+        </optgroup>
+
+        <optgroup label="Região Norte">
+            <option value="PA"> Pará</option>
+            <option value="AM">Amazonas</option> 
+            <option value="RR">Roraima</option> 
+            <option value="RO">Rondônia</option>
+            <option value="AP">Amapá</option>
+            <option value="AC">Acre</option>
+        </optgroup>
+    </select>
+</div>
+    <div class="form-group col-md-12">
+        <label for="idEsportes">Esportes preferidos</label>
+        <div class="form-check form-check-inline">
+             <input class="form-check-input" type="checkbox" id="idCorrida" name="esportes" checked>
+             <label class="form-check-label" for="idTraslado"> Corrida</label>
+            </div>
+            <div class="form-check form-check-inline">
+             <input class="form-check-input" type="checkbox" id="idMergulho" name="esportes" checked>
+             <label class="form-check-label" for="idPasseios"> Mergulho</label>
+            </div>
+             <div class="form-check form-check-inline">
+             <input class="form-check-input" type="checkbox" id="idEquitação" name="adicionais" disabled checked>
+             <label class="form-check-label" for="idJantares"> Equitação</label>
+         </div>
+     </div>
+    <div class="form-group col-md-12">
+    <label for="customRange2">Quanto gosta de praticar esporte (0 a 10)?</label>
+    <input type="range" min="0" max="10" id="customRange2">
+</div>
+<div class="form-group col-md-12">
+    <label for="idEntrega"> Escolha o período de entrega do produto: </label>
+    <label for="idHora">Horário Máximo</label>
+    <input type="time">
+    <label for="idWeek">Semana:</label>
+    <input type="week">
+
+</div>
+<div>
+<input type="submit" value="Cadastro Cliente" class="btn btn-primary" style="margin: 15px;">
+</div>
+<div>
+<input type="reset" value="Limpar Dados" class="btn btn-primary" style="margin: 15px;">
+</div>
+</div>
+    </form>
+
+
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
